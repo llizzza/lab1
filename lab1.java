@@ -29,9 +29,7 @@ public class lab1 {
     }
 
     public boolean isDivisor (int a, int b) {
-        if (a%b==0) {
-            return true;
-        } if (b%a==0) {
+        if (a%b==0 || b%a==0) {
             return true;
         } else {
             return false;
