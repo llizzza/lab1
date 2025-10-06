@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class lab1 {
 
-    public int sumLastNums(int x){
+    public int sumLastNums(int x) {
         int y, z, w;
         y = x % 10;
         z = x / 10;
@@ -12,81 +12,81 @@ public class lab1 {
         return y + w;
     }
 
-    public boolean isPositive (int x){
+    public boolean isPositive (int x) {
         if (x > 0) {
             return true;
         } else {
             return false;
-        }    
+        }
     }
 
-    public boolean isUpperCase (char x){
+    public boolean isUpperCase (char x) {
         if (x >= 'A' && x <= 'Z') {
             return true;
-        }else{
+        } else {
                 return false;
-        }    
+        }
     }
 
-    public boolean isDivisor (int a, int b){
+    public boolean isDivisor (int a, int b) {
         if (a%b==0) {
             return true;
-        }if (b%a==0) {
+        } if (b%a==0) {
             return true;
-        }else {
+        } else {
             return false;
-        }    
+        }
     }
 
-    public int lastNumSum(int a, int b){
+    public int lastNumSum(int a, int b) {
         int x = a%10;
         int y = b%10;
         return x + y;
     }
 
-    public double safeDiv (int x, int y){
+    public double safeDiv (int x, int y) {
         if (y == 0) {
             return 0;
-        }else {
+        } else {
             return x / y;
         }
     }
 
-    public String makeDecision (int x, int y){
+    public String makeDecision (int x, int y) {
         String str1 = ">";
         String str2 = "<";
         String str3 = "==";
         if (x>y) {
             return str1;
-        }else if (x<y) {
-            return str2;
-        }else {
-            return str3;
-        }
-    }
-
-    public boolean sum3 (int x, int y, int z){
-        if (x+y==z || x+z==y || y+z==x) {
-            return true;
-        }else {
-            return false;
-        }
-    }
-
-    public String age (int x){
-        String str1 = "год";
-        String str2 = "года";
-        String str3 = "лет";
-        if (x%10==1 && x%100!=11) {
-            return str1;
-        }else if ((x%10==2 || x%10==3 || x%10==4) && (x%100!=12 && x%100!=13 && x%100!=14)) {
+        } else if (x<y) {
             return str2;
         } else {
             return str3;
         }
     }
 
-    public void printDays (String x){
+    public boolean sum3 (int x, int y, int z) {
+        if (x+y==z || x+z==y || y+z==x) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public String age (int x) {
+        String str1 = "год";
+        String str2 = "года";
+        String str3 = "лет";
+        if (x%10==1 && x%100!=11) {
+            return str1;
+        } else if ((x%10==2 || x%10==3 || x%10==4) && (x%100!=12 && x%100!=13 && x%100!=14)) {
+            return str2;
+        } else {
+            return str3;
+        }
+    }
+
+    public void printDays (String x) {
         switch (x.toLowerCase()){
             case "понедельник":
                 System.out.println("понедельник\nвторник\nсреда\nчетверг\nпятница\nсуббота\nвоскресенье" ); break;
@@ -107,7 +107,7 @@ public class lab1 {
         }
     }
 
-    public String reverseListNums (int x){
+    public String reverseListNums (int x) {
         String strNumber = " ";
         for (int i = x; i >= 0; i--) {
             strNumber += i + " ";
@@ -115,19 +115,19 @@ public class lab1 {
         return strNumber ;
     }
 
-    public int pow (int x, int y){
+    public int pow (int x, int y) {
         int p=1;
-        for (int i = 0; i<y; i++){
+        for (int i = 0; i<y; i++) {
             p = x * p;
         }
         return p;
     }
 
-    public boolean equalNum (int x){
+    public boolean equalNum (int x) {
         int last = x%10;
         while (x>0){
             int current = x% 10;
-            if (last != current){
+            if (last != current) {
                 return false;
             }
             x = x/10;
@@ -135,15 +135,15 @@ public class lab1 {
         return true;
     }
 
-    public void leftTriangle (int x){
+    public void leftTriangle (int x) {
         String str = "";
-        for (int i = 0; i<x; i++){
+        for (int i = 0; i<x; i++) {
             str += "*";
             System.out.println(str);
         }
     }
 
-    public void guessGame(){
+    public void guessGame() {
         Random random = new Random();
         int num = random.nextInt(10);
         Scanner scanner = new Scanner(System.in);
@@ -175,8 +175,8 @@ public class lab1 {
         }
 
 
-    public int findLast (int[] arr, int x){
-        for (int i = arr.length-1; i >=0; i--){
+    public int findLast (int[] arr, int x) {
+        for (int i = arr.length-1; i >=0; i--) {
             if (arr[i]==x){
                 return i;
             }
@@ -184,9 +184,9 @@ public class lab1 {
         return -1;
     }
 
-    public int[]add (int[] arr, int x, int pos){
+    public int[]add (int[] arr, int x, int pos) {
         int[] newarr = new int[arr.length + 1];
-        for (int i = 0; i<pos; i++){
+        for (int i = 0; i<pos; i++) {
             newarr[i]+=arr[i];
         }
         newarr[pos] = x;
@@ -196,7 +196,7 @@ public class lab1 {
         return newarr;
     }
 
-    public void reverse (int[] arr){
+    public void reverse (int[] arr) {
         int[] newarr = new int[arr.length];
         int j = 0;
         for (int i = arr.length - 1; i >= 0; i--) {
@@ -208,27 +208,27 @@ public class lab1 {
         }
     }
 
-    public int[] concat (int[] arr1,int[] arr2){
+    public int[] concat (int[] arr1,int[] arr2) {
         int [] newarr = new int[arr1.length+arr2.length];
-        for (int i =0; i<arr1.length; i++){
+        for (int i =0; i<arr1.length; i++) {
             newarr[i]=arr1[i];
         }
-        for (int i =0; i<arr2.length; i++){
+        for (int i =0; i<arr2.length; i++) {
             newarr[arr1.length+i]=arr2[i];
         }
         return newarr;
     }
 
-    public int[] deleteNegative (int[] arr){
+    public int[] deleteNegative (int[] arr) {
         int count = 0;
-        for (int i = 0; i<arr.length; i++){
-            if (arr[i] >=0){
+        for (int i = 0; i<arr.length; i++) {
+            if (arr[i] >=0) {
                 count++;
             }
         }
         int[] newarr = new int[count];
         int index=0;
-        for (int i=0; i<arr.length;i++){
+        for (int i=0; i<arr.length;i++) {
             if (arr[i]>=0){
                 newarr[index++]=arr[i];
             }
