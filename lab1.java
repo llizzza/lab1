@@ -13,26 +13,29 @@ public class lab1 {
     }
 
     public boolean isPositive (int x){
-        if (x > 0)
+        if (x > 0) {
             return true;
-        else
+        } else {
             return false;
+        }    
     }
 
     public boolean isUpperCase (char x){
-        if (x >= 'A' && x <= 'Z')
+        if (x >= 'A' && x <= 'Z') {
             return true;
-        else
-            return false;
+        }else{
+                return false;
+        }    
     }
 
     public boolean isDivisor (int a, int b){
-        if (a%b==0)
+        if (a%b==0) {
             return true;
-        if (b%a==0)
+        }if (b%a==0) {
             return true;
-        else
+        }else {
             return false;
+        }    
     }
 
     public int lastNumSum(int a, int b){
@@ -42,41 +45,45 @@ public class lab1 {
     }
 
     public double safeDiv (int x, int y){
-        if (y == 0)
+        if (y == 0) {
             return 0;
-        else
-            return x/y;
+        }else {
+            return x / y;
+        }
     }
 
     public String makeDecision (int x, int y){
         String str1 = ">";
         String str2 = "<";
         String str3 = "==";
-        if (x>y)
+        if (x>y) {
             return str1;
-        else if (x<y)
+        }else if (x<y) {
             return str2;
-        else
+        }else {
             return str3;
+        }
     }
 
     public boolean sum3 (int x, int y, int z){
-        if (x+y==z || x+z==y || y+z==x)
+        if (x+y==z || x+z==y || y+z==x) {
             return true;
-        else
+        }else {
             return false;
+        }
     }
 
     public String age (int x){
         String str1 = "год";
         String str2 = "года";
         String str3 = "лет";
-        if (x%10==1 && x%100!=11)
+        if (x%10==1 && x%100!=11) {
             return str1;
-        else if ((x%10==2 || x%10==3 || x%10==4) && (x%100!=12 && x%100!=13 && x%100!=14))
+        }else if ((x%10==2 || x%10==3 || x%10==4) && (x%100!=12 && x%100!=13 && x%100!=14)) {
             return str2;
-        else
+        } else {
             return str3;
+        }
     }
 
     public void printDays (String x){
